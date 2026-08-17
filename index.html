@@ -13,23 +13,23 @@
 </head>
 <body class="bg-slate-50 min-h-screen text-slate-800">
 
-    <!-- Header met Altrio Branding -->
-    <header class="bg-emerald-900 text-white shadow-lg sticky top-0 z-50 border-b-4 border-amber-500">
+    <!-- Header met Altrio Blauw & Oranje Branding -->
+    <header class="bg-[#113B6B] text-white shadow-lg sticky top-0 z-50 border-b-4 border-[#F29111]">
         <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center space-x-4">
-                <div class="bg-amber-500 text-emerald-950 font-extrabold px-3 py-2 rounded-lg text-2xl tracking-wider shadow-inner">
+                <div class="bg-[#F29111] text-[#113B6B] font-extrabold px-3 py-2 rounded-lg text-2xl tracking-wider shadow">
                     ALTRIO
                 </div>
                 <div>
-                    <h1 class="text-xl font-extrabold tracking-tight">Altrio Home <span class="text-amber-400 font-medium">• Intake nieuwe patiënt</span></h1>
-                    <p class="text-xs text-emerald-200/80">Systematisch Verpleegkundig Handelen & Compliance • Anno 2026</p>
+                    <h1 class="text-xl font-extrabold tracking-tight">Altrio Home <span class="text-[#F29111] font-medium">• Intake nieuwe patiënt</span></h1>
+                    <p class="text-xs text-slate-200/90">Systematisch Verpleegkundig Handelen & Compliance • Anno 2026</p>
                 </div>
             </div>
             
             <!-- Systeemfase Selector -->
-            <div class="mt-4 md:mt-0 flex items-center space-x-2 bg-emerald-955 px-3 py-2 rounded-lg border border-emerald-700/60 shadow">
-                <label for="systemPhase" class="text-xs font-bold text-amber-400">Actieve Systeemfase:</label>
-                <select id="systemPhase" onchange="updateSystemPhase()" class="bg-emerald-800 text-white text-xs font-bold rounded border-none focus:ring-2 focus:ring-amber-500 py-1 px-2 cursor-pointer outline-none">
+            <div class="mt-4 md:mt-0 flex items-center space-x-2 bg-[#0e2f56] px-3 py-2 rounded-lg border border-slate-700/60 shadow">
+                <label for="systemPhase" class="text-xs font-bold text-[#F29111]">Actieve Systeemfase:</label>
+                <select id="systemPhase" onchange="updateSystemPhase()" class="bg-[#113B6B] text-white text-xs font-bold rounded border-none focus:ring-2 focus:ring-[#F29111] py-1 px-2 cursor-pointer outline-none">
                     <option value="phase1">Fase 1: Huidig (Gordon-fiches)</option>
                     <option value="phase2">Fase 2: Transitie (BelRAI-Screener)</option>
                     <option value="phase3">Fase 3: Toekomst (BelRAI HomeCare - HC)</option>
@@ -41,9 +41,9 @@
     <!-- Main Content Area -->
     <main class="max-w-7xl mx-auto px-6 py-8">
         
-        <!-- Tab Navigatie -->
+        <!-- Tab Navigatie (Blauw/Oranje Huisstijl) -->
         <div class="flex border-b border-slate-200 mb-8 bg-white rounded-xl shadow-sm overflow-hidden p-1">
-            <button onclick="switchTab('zlo')" id="tab-zlo" class="flex-1 py-3.5 px-6 text-center rounded-lg text-emerald-900 font-extrabold text-sm md:text-base flex justify-center items-center space-x-2 transition-all bg-emerald-50 border border-emerald-100">
+            <button onclick="switchTab('zlo')" id="tab-zlo" class="flex-1 py-3.5 px-6 text-center rounded-lg text-[#113B6B] font-extrabold text-sm md:text-base flex justify-center items-center space-x-2 transition-all bg-[#FEF5EC] border border-[#fde2cb]">
                 <span>📞 Portaal 1: ZLO / ReCo Intake</span>
             </button>
             <button onclick="switchTab('vvaz')" id="tab-vvaz" class="flex-1 py-3.5 px-6 text-center rounded-lg text-slate-500 font-medium text-sm md:text-base flex justify-center items-center space-x-2 transition-all hover:text-slate-800 hover:bg-slate-50">
@@ -60,17 +60,17 @@
                     
                     <!-- BLOK 1: De Beller -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <h2 class="text-md font-bold text-emerald-900 mb-4 flex items-center border-b border-slate-100 pb-2">
-                            <span class="bg-amber-100 text-amber-800 p-1 rounded-lg mr-2 text-xs font-bold">1</span> Bellergegevens
+                        <h2 class="text-md font-bold text-[#113B6B] mb-4 flex items-center border-b border-slate-100 pb-2">
+                            <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg mr-2 text-xs font-bold">1</span> Bellergegevens
                         </h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Naam beller</label>
-                                <input type="text" id="bellerName" value="Marc Janssens" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="bellerName" value="Marc Janssens" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Relatie tot patiënt</label>
-                                <select id="bellerRelatie" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <select id="bellerRelatie" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                                     <option value="Zoon/Dochter">Zoon / Dochter</option>
                                     <option value="Partner">Partner</option>
                                     <option value="Patiënt zelf">Patiënt zelf</option>
@@ -81,85 +81,85 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Telefoonnummer beller</label>
-                                <input type="text" id="bellerPhone" value="0495 12 34 56" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="bellerPhone" value="0495 12 34 56" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">E-mail beller</label>
-                                <input type="text" id="bellerEmail" value="marc.janssens@telenet.be" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="bellerEmail" value="marc.janssens@telenet.be" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                         </div>
                     </div>
 
                     <!-- BLOK 2: Patiënt en aanmelding -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <h2 class="text-md font-bold text-emerald-900 mb-4 flex items-center border-b border-slate-100 pb-2">
-                            <span class="bg-amber-100 text-amber-800 p-1 rounded-lg mr-2 text-xs font-bold">2</span> Patiënt & Aanmelding
+                        <h2 class="text-md font-bold text-[#113B6B] mb-4 flex items-center border-b border-slate-100 pb-2">
+                            <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg mr-2 text-xs font-bold">2</span> Patiënt & Aanmelding
                         </h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Naam Patiënt</label>
-                                <input type="text" id="patName" value="Jeanine Janssens" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="patName" value="Jeanine Janssens" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Rijksregisternummer (RRN)</label>
-                                <input type="text" id="patRrn" value="45.08.12-123.45" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="patRrn" value="45.08.12-123.45" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Geboortedatum</label>
-                                <input type="date" id="patDob" value="1945-08-12" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="date" id="patDob" value="1945-08-12" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Zorgduur</label>
-                                <select id="zorgduur" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <select id="zorgduur" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                                     <option value="long">> 1 week (VVAZ-validatie wettelijk verplicht)</option>
                                     <option value="short">< 1 week (Korte-zorg-uitzondering: BV autonoom)</option>
                                 </select>
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Persoonlijk Levensdoel (Quintuple Aim - Patiënt Centraal)</label>
-                                <textarea id="levensdoel" rows="2" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition" placeholder="Wat is voor deze patiënt echt belangrijk in het leven? (Bijv. zelfstandig koffie kunnen zetten, pijnvrij de kleinkinderen ontvangen, comfortabel thuis sterven...)"></textarea>
+                                <textarea id="levensdoel" rows="2" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition" placeholder="Wat is voor deze patiënt echt belangrijk in het leven? (Bijv. zelfstandig koffie kunnen zetten, pijnvrij de kleinkinderen ontvangen, comfortabel thuis sterven...)"></textarea>
                             </div>
                         </div>
                     </div>
 
                     <!-- BLOK 3: Verzorgingsadres -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <h2 class="text-md font-bold text-emerald-900 mb-4 flex items-center border-b border-slate-100 pb-2">
-                            <span class="bg-amber-100 text-amber-800 p-1 rounded-lg mr-2 text-xs font-bold">3</span> Verzorgingsadres
+                        <h2 class="text-md font-bold text-[#113B6B] mb-4 flex items-center border-b border-slate-100 pb-2">
+                            <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg mr-2 text-xs font-bold">3</span> Verzorgingsadres
                         </h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div class="md:col-span-2">
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Straat en huisnummer</label>
-                                <input type="text" id="adrStraat" value="Dorpsstraat 14" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="adrStraat" value="Dorpsstraat 14" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Bus</label>
-                                <input type="text" id="adrBus" value="A" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="adrBus" value="A" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Postcode</label>
-                                <input type="text" id="adrPostcode" value="2000" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="adrPostcode" value="2000" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Gemeente</label>
-                                <input type="text" id="adrGemeente" value="Antwerpen" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="adrGemeente" value="Antwerpen" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                             <div class="md:col-span-3">
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Toegang & Sleutel / Belangrijke opmerkingen</label>
-                                <input type="text" id="adrToegang" value="Sleutelkastje aan de achterdeur (Code: 4321). Hond aanwezig in de tuin." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition">
+                                <input type="text" id="adrToegang" value="Sleutelkastje aan de achterdeur (Code: 4321). Hond aanwezig in de tuin." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition">
                             </div>
                         </div>
                     </div>
 
                     <!-- BLOK 4: Ronde- en VVAZ-controle -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <h2 class="text-md font-bold text-emerald-900 mb-4 flex items-center border-b border-slate-100 pb-2">
-                            <span class="bg-amber-100 text-amber-800 p-1 rounded-lg mr-2 text-xs font-bold">4</span> Ronde- & VVAZ-controle
+                        <h2 class="text-md font-bold text-[#113B6B] mb-4 flex items-center border-b border-slate-100 pb-2">
+                            <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg mr-2 text-xs font-bold">4</span> Ronde- & VVAZ-controle
                         </h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Geografische ADL-Ronde</label>
-                                <select id="adlRonde" onchange="checkVvazAvailability()" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 transition cursor-pointer">
+                                <select id="adlRonde" onchange="checkVvazAvailability()" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition cursor-pointer">
                                     <option value="Ronde Antwerpen Zuid (VVAZ actief)">Ronde Antwerpen Zuid (VVAZ Actief)</option>
                                     <option value="Ronde Kapellen (Geen VVAZ)">Ronde Kapellen (GEEN VVAZ ACTIEF op deze ronde!)</option>
                                 </select>
@@ -175,15 +175,15 @@
                             <span class="text-2xl">🚨</span>
                             <div>
                                 <h4 class="font-extrabold text-sm text-rose-950">VEILIGHEIDSSTOP: Intake Geblokkeerd!</h4>
-                                <p class="text-xs mt-0.5 text-rose-800/90 leading-relaxed">Er is op deze geografische ronde momenteel geen actieve VVAZ (Niveau 6) gekoppeld. Om de klinische regie en wettelijke compliance te garanderen, blokkeert Care-Ace de planning en opstart op deze ronde.</p>
+                                <p class="text-xs mt-0.5 text-rose-800/90 leading-relaxed">Er is op deze geografische ronde momenteel geen actieve VVAZ (Niveau 6) gekoppeld. Om de klinische regie en wettelijke compliance te garanderen, van de pre-registratie, blokkeert Care-Ace de planning en opstart op deze ronde.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- BLOK 5: De 8 Startvragen -->
                     <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                        <h2 class="text-md font-bold text-emerald-900 mb-4 flex items-center border-b border-slate-100 pb-2">
-                            <span class="bg-amber-100 text-amber-800 p-1 rounded-lg mr-2 text-xs font-bold">5</span> De 8 Gestandaardiseerde Startvragen
+                        <h2 class="text-md font-bold text-[#113B6B] mb-4 flex items-center border-b border-slate-100 pb-2">
+                            <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg mr-2 text-xs font-bold">5</span> De 8 Gestandaardiseerde Startvragen
                         </h2>
                         <p class="text-xs text-slate-500 mb-5">Beantwoord onderstaande vragen om de dynamische zorgkoppeling en triage op te starten.</p>
                         
@@ -195,7 +195,7 @@
                                     <p class="text-xs text-slate-500 mt-0.5">Is er actieve hulp of toezicht nodig bij wassen, kleden of de bed-stoeltransfer?</p>
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
-                                    <button onclick="setQuestion(1, 'ja')" id="q1-ja" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">JA</button>
+                                    <button onclick="setQuestion(1, 'ja')" id="q1-ja" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">JA</button>
                                     <button onclick="setQuestion(1, 'nee')" id="q1-nee" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">NEE</button>
                                     <button onclick="setQuestion(1, 'onzeker')" id="q1-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
@@ -208,19 +208,19 @@
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(2, 'ja')" id="q2-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(2, 'nee')" id="q2-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(2, 'nee')" id="q2-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(2, 'onzeker')" id="q2-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
                             <!-- Vraag 3 -->
-                            <div class="p-3.5 bg-slate-50 rounded-xl flex flex-col lg:flex-row justify-between items-start lg:items-center border border-slate-100 hover:bg-slate-100/50 transition">
+                            <div class="p-3.5 bg-slate-50 rounded-xl flex flex-col lg:flex-row justify-between items-start lg:items-center border border-slate-100 hover:bg-slate-100/50 transition bg-[#FFF9F2] border-amber-200/60">
                                 <div class="max-w-xl mb-3 lg:mb-0">
-                                    <h4 class="text-sm font-bold text-slate-800">3. Psychisch functioneren</h4>
-                                    <p class="text-xs text-slate-500 mt-0.5">Ervaart de patiënt extreme angst, somberheid, paniek of depressieve gevoelens?</p>
+                                    <h4 class="text-sm font-bold text-slate-800">3. Psychisch functioneren & Slaap/Rust <span class="text-xs text-[#E67E22] font-semibold">(Triggert Patroon 5!)</span></h4>
+                                    <p class="text-xs text-slate-500 mt-0.5">Angst, somberheid, piekeren, slaapstoornissen of constante vermoeidheid?</p>
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(3, 'ja')" id="q3-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(3, 'nee')" id="q3-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(3, 'nee')" id="q3-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(3, 'onzeker')" id="q3-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(4, 'ja')" id="q4-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(4, 'nee')" id="q4-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(4, 'nee')" id="q4-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(4, 'onzeker')" id="q4-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(5, 'ja')" id="q5-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(5, 'nee')" id="q5-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(5, 'nee')" id="q5-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(5, 'onzeker')" id="q5-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(6, 'ja')" id="q6-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(6, 'nee')" id="q6-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(6, 'nee')" id="q6-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(6, 'onzeker')" id="q6-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
@@ -268,19 +268,19 @@
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(7, 'ja')" id="q7-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(7, 'nee')" id="q7-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(7, 'nee')" id="q7-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(7, 'onzeker')" id="q7-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
                             <!-- Vraag 8 -->
-                            <div class="p-3.5 bg-slate-50 rounded-xl flex flex-col lg:flex-row justify-between items-start lg:items-center border border-slate-100 hover:bg-slate-100/50 transition">
+                            <div class="p-3.5 bg-slate-50 rounded-xl flex flex-col lg:flex-row justify-between items-start lg:items-center border border-slate-100 hover:bg-slate-100/50 transition bg-[#FFF9F2] border-amber-200/60">
                                 <div class="max-w-xl mb-3 lg:mb-0">
-                                    <h4 class="text-sm font-bold text-slate-800">8. Palliatieve / Coördinatiebehoeften</h4>
+                                    <h4 class="text-sm font-bold text-slate-800">8. Palliatieve / Coördinatiebehoeften <span class="text-xs text-[#E67E22] font-semibold">(Triggert Patroon 11!)</span></h4>
                                     <p class="text-xs text-slate-500 mt-0.5">Is er een gekend/vermoedelijk palliatief statuut, of is er nood aan complexe zorgcoördinatie?</p>
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto">
                                     <button onclick="setQuestion(8, 'ja')" id="q8-ja" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">JA</button>
-                                    <button onclick="setQuestion(8, 'nee')" id="q8-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm">NEE</button>
+                                    <button onclick="setQuestion(8, 'nee')" id="q8-nee" class="px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm">NEE</button>
                                     <button onclick="setQuestion(8, 'onzeker')" id="q8-onzeker" class="px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100">ONZEKER</button>
                                 </div>
                             </div>
@@ -288,16 +288,16 @@
                     </div>
                 </div>
 
-                <!-- Rechterzijde: Live Systeem-Koppeling (Huisstijl Altrio) -->
+                <!-- Rechterzijde: Live Systeem-Koppeling (Altrio Blauw & Oranje) -->
                 <div class="space-y-6 font-sans">
-                    <div class="bg-emerald-950 text-white p-6 rounded-2xl shadow-xl sticky top-24 border-t-4 border-amber-500">
-                        <h3 class="text-md font-extrabold mb-4 flex items-center border-b border-emerald-800 pb-3">
-                            <span class="bg-amber-500 text-emerald-950 p-1.5 rounded-lg mr-2 text-xs font-extrabold">🚀</span> Systeem-Koppeling
+                    <div class="bg-[#113B6B] text-white p-6 rounded-2xl shadow-xl sticky top-24 border-t-4 border-[#F29111]">
+                        <h3 class="text-md font-extrabold mb-4 flex items-center border-b border-sky-800 pb-3">
+                            <span class="bg-[#F29111] text-emerald-950 p-1.5 rounded-lg mr-2 text-xs font-extrabold">🚀</span> Systeem-Koppeling
                         </h3>
                         
                         <!-- Fase 1 Mapping View -->
                         <div id="mapping-phase1" class="space-y-4">
-                            <p class="text-xs text-emerald-200">Op basis van de startvragen worden in het EPD van de **VVAZ** automatisch de volgende **Gordon-fiches** geactiveerd:</p>
+                            <p class="text-xs text-slate-200">Op basis van de startvragen worden in het EPD van de **VVAZ** automatisch de volgende **Gordon-fiches** geactiveerd:</p>
                             <div class="space-y-2" id="gordon-list">
                                 <!-- Dynamisch JS -->
                             </div>
@@ -305,24 +305,24 @@
 
                         <!-- Fase 2 Mapping View -->
                         <div id="mapping-phase2" class="hidden space-y-4">
-                            <p class="text-xs text-emerald-200">Op basis van de startvragen worden de volgende **BelRAI Screener-modules** voorbereid:</p>
+                            <p class="text-xs text-slate-200">Op basis van de startvragen worden de volgende **BelRAI Screener-modules** voorbereid:</p>
                             <div class="space-y-2" id="screener-list">
                                 <!-- Dynamisch JS -->
                             </div>
-                            <div id="screenerAlert" class="hidden p-3 bg-amber-500/20 border border-amber-500/40 text-amber-200 rounded-lg text-xs leading-relaxed">
+                            <div id="screenerAlert" class="hidden p-3 bg-amber-500/20 border border-[#F29111]/40 text-amber-200 rounded-lg text-xs leading-relaxed">
                                 <strong>🚨 COMPLIANCE WAARSCHUWING:</strong> Minstens één van de eerste 5 BelRAI-vragen is positief. De formele BelRAI-Screener is wettelijk verplicht!
                             </div>
                         </div>
 
                         <!-- Fase 3 Mapping View -->
                         <div id="mapping-phase3" class="hidden space-y-4">
-                            <p class="text-xs text-emerald-200">De startvragen mappen in de toekomst direct naar de specifieke modules van de **BelRAI HomeCare (HC)**:</p>
+                            <p class="text-xs text-slate-200">De startvragen mappen in de toekomst direct naar de specifieke modules van de **BelRAI HomeCare (HC)**:</p>
                             <div class="space-y-2" id="hc-list">
                                 <!-- Dynamisch JS -->
                             </div>
                         </div>
 
-                        <button onclick="switchTab('vvaz')" class="w-full mt-6 bg-amber-500 hover:bg-amber-400 text-emerald-950 font-black py-3 px-4 rounded-xl text-sm transition-all shadow hover:shadow-lg tracking-wider uppercase">
+                        <button onclick="switchTab('vvaz')" class="w-full mt-6 bg-[#F29111] hover:bg-amber-500 text-[#113B6B] font-black py-3 px-4 rounded-xl text-sm transition-all shadow hover:shadow-lg tracking-wider uppercase">
                             Stuur naar VVAZ →
                         </button>
                     </div>
@@ -336,35 +336,35 @@
             <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-slate-100 pb-4">
                     <div>
-                        <h2 class="text-xl font-black text-emerald-900">VVAZ Mobiele Intake & Triage</h2>
+                        <h2 class="text-xl font-black text-[#113B6B]">VVAZ Mobiele Intake & Triage</h2>
                         <p class="text-xs text-slate-500 mt-0.5">Uitgevoerd tijdens het eerste klinische huisbezoek.</p>
                     </div>
                     <!-- Complexiteit Badge -->
                     <div class="mt-3 md:mt-0 flex items-center space-x-2">
                         <span class="text-xs font-bold text-slate-500">Berekende Complexiteit:</span>
-                        <span id="complexityBadge" class="px-3.5 py-1.5 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 border border-emerald-200">GROEN</span>
+                        <span id="complexityBadge" class="px-3.5 py-1.5 rounded-full text-xs font-black bg-emerald-100 text-[#113B6B] border border-emerald-200">GROEN</span>
                     </div>
                 </div>
 
                 <!-- Patiënt details & Levensdoelen -->
-                <div class="bg-emerald-50/40 p-5 rounded-2xl mb-6 border border-emerald-100 flex flex-col lg:flex-row justify-between gap-6">
+                <div class="bg-slate-100/50 p-5 rounded-2xl mb-6 border border-slate-200 flex flex-col lg:flex-row justify-between gap-6">
                     <div class="space-y-2 text-sm max-w-md">
-                        <h3 class="text-xs font-extrabold text-emerald-900 uppercase tracking-wider">Algemeen Administratief Dossier</h3>
+                        <h3 class="text-xs font-extrabold text-[#113B6B] uppercase tracking-wider">Algemeen Administratief Dossier</h3>
                         <div><span class="text-slate-500 font-medium">Naam Patiënt:</span> <span id="vvaz-name" class="font-bold text-slate-800">Jeanine Janssens</span></div>
                         <div><span class="text-slate-500 font-medium">Rijksregister (RRN):</span> <span id="vvaz-rrn" class="font-bold text-slate-800">45.08.12-123.45</span></div>
                         <div><span class="text-slate-500 font-medium">Zorgduur:</span> <span id="vvaz-zorgduur" class="font-bold text-slate-800">> 1 week</span></div>
                         <div><span class="text-slate-500 font-medium">Verzorgingsadres:</span> <span id="vvaz-adres" class="font-bold text-slate-800">Dorpsstraat 14, 2000 Antwerpen</span></div>
                     </div>
                     <div class="space-y-2 text-sm max-w-md">
-                        <h3 class="text-xs font-extrabold text-emerald-900 uppercase tracking-wider">Beller & Toeganggegevens</h3>
+                        <h3 class="text-xs font-extrabold text-[#113B6B] uppercase tracking-wider">Beller & Toeganggegevens</h3>
                         <div><span class="text-slate-500 font-medium">Naam Beller:</span> <span id="vvaz-beller" class="font-bold text-slate-800">Marc Janssens (Zoon)</span></div>
                         <div><span class="text-slate-500 font-medium">Telefoon Beller:</span> <span id="vvaz-bphone" class="font-bold text-slate-800">0495 12 34 56</span></div>
                         <div><span class="text-slate-500 font-medium">Ronde & Sleutel:</span> <span id="vvaz-ronde" class="font-bold text-slate-800">Ronde Antwerpen Zuid</span></div>
                         <div><span class="text-slate-500 font-medium">Sleutel/Toegang:</span> <span id="vvaz-toegang" class="font-bold text-slate-800">Sleutelkastje achterdeur</span></div>
                     </div>
-                    <div class="bg-white p-4 rounded-xl border border-emerald-100 shadow-sm max-w-sm flex-1">
-                        <h3 class="text-xs font-extrabold text-amber-600 uppercase tracking-wider mb-2">Patiënt-Levensdoel (Quintuple Aim)</h3>
-                        <p class="text-emerald-900 italic font-medium text-sm leading-relaxed" id="vvaz-levensdoel">Zelfstandig koffie kunnen zetten en comfortabel thuis sterven.</p>
+                    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm max-w-sm flex-1">
+                        <h3 class="text-xs font-extrabold text-[#E67E22] uppercase tracking-wider mb-2">Patiënt-Levensdoel (Quintuple Aim)</h3>
+                        <p class="text-slate-800 italic font-medium text-sm leading-relaxed" id="vvaz-levensdoel">Zelfstandig koffie kunnen zetten en comfortabel thuis sterven.</p>
                     </div>
                 </div>
 
@@ -375,8 +375,8 @@
 
                 <!-- Zorgplanning & Compliance -->
                 <div class="bg-slate-100 p-6 rounded-2xl border border-slate-200 mt-8">
-                    <h3 class="text-lg font-extrabold text-emerald-900 mb-4 flex items-center">
-                        <span class="bg-emerald-800 text-white p-1 rounded-lg mr-2 text-xs">📋</span> Concept-Zorgplan & Compliance Checks
+                    <h3 class="text-lg font-extrabold text-[#113B6B] mb-4 flex items-center">
+                        <span class="bg-[#113B6B] text-white p-1 rounded-lg mr-2 text-xs">📋</span> Concept-Zorgplan & Compliance Checks
                     </h3>
 
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -385,12 +385,12 @@
                             <h4 class="text-sm font-extrabold text-slate-800 border-b border-slate-100 pb-2 mb-3 uppercase tracking-wider">DEEL A: RIZIV & Compliance Minimum</h4>
                             <div class="space-y-4 text-xs">
                                 <div>
-                                    <label class="block font-bold text-slate-600 mb-1">Coördinerende & Back-up VVAZ (Min. 2 vereist)</label>
+                                    <label class="block font-bold text-slate-600 mb-1">Coördinerende & Back-up VVAZ (Min. 2 verplicht)</label>
                                     <input type="text" value="VVAZ 1: Sophie Peeters (Visumnummer: 1234567) • VVAZ 2: Jan Claes (Visumnummer: 7654321)" class="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-2 focus:outline-none font-medium text-slate-700">
                                 </div>
                                 <div>
                                     <label class="block font-bold text-slate-600 mb-1">Gekoppelde Medische Voorschriften</label>
-                                    <div class="p-2.5 bg-emerald-50 text-emerald-800 rounded-lg border border-emerald-100 font-bold flex items-center space-x-1.5">
+                                    <div class="p-2.5 bg-[#FEF5EC] text-[#E67E22] rounded-lg border border-[#fde2cb] font-bold flex items-center space-x-1.5">
                                         <span>✓</span> <span>Medisch voorschrift aanwezig en gekoppeld voor B2-handelingen.</span>
                                     </div>
                                 </div>
@@ -402,7 +402,7 @@
                         </div>
 
                         <!-- Deel B (Kwaliteitswaarborg - Gemarkeerde kleur) -->
-                        <div class="bg-amber-50/40 p-5 rounded-xl border border-amber-200/60 shadow-sm">
+                        <div class="bg-[#FFFDF9] p-5 rounded-xl border border-amber-200/80 shadow-sm">
                             <h4 class="text-sm font-extrabold text-amber-900 border-b border-amber-200 pb-2 mb-3 uppercase tracking-wider">DEEL B: Kwaliteitswaarborg (Woonzorg)</h4>
                             <div class="space-y-4 text-xs">
                                 <div>
@@ -418,15 +418,15 @@
                                     <p class="text-[11px] text-amber-700/80 mb-2 font-medium">⚠️ RIZIV Compliance-regel: Er mogen absoluut geen specifieke uren (zoals "9:00 uur") in het zorgplan worden opgenomen wegens schijnzelfstandigheids-risico's. Plan uitsluitend in brede dagdelen:</p>
                                     <div class="flex space-x-4">
                                         <label class="flex items-center space-x-1.5 cursor-pointer">
-                                            <input type="radio" name="dagdeel" class="text-emerald-800 focus:ring-emerald-700" checked>
+                                            <input type="radio" name="dagdeel" class="text-[#113B6B] focus:ring-[#113B6B]" checked>
                                             <span class="font-bold text-amber-900">Ochtend</span>
                                         </label>
                                         <label class="flex items-center space-x-1.5 cursor-pointer">
-                                            <input type="radio" name="dagdeel" class="text-emerald-800 focus:ring-emerald-700">
+                                            <input type="radio" name="dagdeel" class="text-[#113B6B] focus:ring-[#113B6B]">
                                             <span class="font-bold text-amber-900">Voormiddag</span>
                                         </label>
                                         <label class="flex items-center space-x-1.5 cursor-pointer">
-                                            <input type="radio" name="dagdeel" class="text-emerald-800 focus:ring-emerald-700">
+                                            <input type="radio" name="dagdeel" class="text-[#113B6B] focus:ring-[#113B6B]">
                                             <span class="font-bold text-amber-900">Namiddag</span>
                                         </label>
                                     </div>
@@ -438,7 +438,7 @@
 
                 <!-- Actieknop -->
                 <div class="mt-8 flex justify-end">
-                    <button onclick="signZorgplan()" class="bg-emerald-800 hover:bg-emerald-700 text-white font-extrabold py-3 px-6 rounded-xl text-sm transition-all shadow-md flex items-center space-x-2 border-b-2 border-emerald-950">
+                    <button onclick="signZorgplan()" class="bg-[#113B6B] hover:bg-sky-850 text-white font-extrabold py-3 px-6 rounded-xl text-sm transition-all shadow-md flex items-center space-x-2 border-b-2 border-slate-900">
                         <span>✍️ Bekrachtig en Activeer Zorgplan in Care-Ace</span>
                     </button>
                 </div>
@@ -465,12 +465,12 @@
         const gordonMapping = {
             1: ["Patroon 4: Activiteitenpatroon (Lichamelijke zelfzorg, Wassen & Kleden)", "Patroon 3: Uitscheidingspatroon (Continentie & Toiletbezoek)"],
             2: ["Patroon 6: Cognitief-perceptueel patroon (Geheugenverlies & Verwardheid)"],
-            3: ["Patroon 10: Stressverwerkings- & Copingpatroon (Psychosociale alarmsignalen)", "Patroon 7: Zelfbeleving- & Zelfconceptpatroon"],
+            3: ["Patroon 10: Stressverwerkings- & Copingpatroon (Psychosociale alarmsignalen)", "Patroon 7: Zelfbeleving- & Zelfconceptpatroon", "Patroon 5: Slaap- & Rustpatroon (Piekeren, Slapeloosheid & Vermoeidheid)"],
             4: ["Patroon 8: Rollen- & Relatiespatroon (Gedragsproblemen & Zorgverzet)"],
             5: ["Patroon 1: Gezondheidsbeleving & -instandhouding", "Patroon 2: Voeding- & Stofwisselingspatroon (Gewichtsverlies)"],
             6: ["Patroon 2: Voeding- & Stofwisselingspatroon (Decubitus & Huidintegriteit/Wondzorg)"],
             7: ["Patroon 8: Rollen- & Relatiespatroon (Mantelzorgbelasting & Draagkracht)"],
-            8: ["Patroon 11: Waarden- & Overtuigingenpatroon (Palliatieve zorg & Levensdoelen)"]
+            8: ["Patroon 11: Waarden- & Overtuigingenpatroon (Palliatieve zorg & Levensdoelen)", "Patroon 5: Slaap- & Rustpatroon (Palliatief Comfort/Nachtrust)"]
         };
 
         // Gekoppelde fiches per startvraag voor Fase 2 (BelRAI Screener)
@@ -497,63 +497,63 @@
             8: ["Module 18: Ontslagmogelijkheden & Algemene Toestand", "Module 19: Ontslaginformatie"]
         };
 
-        // Specifieke klinische fiche inhoud voor de VVAZ mobiele view
+        // Specifieke klinische fiche inhoud voor de VVAZ mobiele view (Inclusief Patroon 5!)
         const clinicalFichesData = {
             1: {
                 title: "Fiche Wassen & Lichaamsverzorging (Gordon Patroon 4)",
                 questions: "Kan de patiënt zelf de rug en voeten wassen? Heeft de patiënt schimmel- of kalknagels? Is er een verhoogd valrisico in de badkamer?",
                 observations: "Droge, schilferige huid, onverzorgde nagels, instabiele transfers.",
                 causes: "Ernstige osteoporose, spierzwakte en evenwichtsstoornissen.",
-                interventions: "Verifieer gewenste watertemperatuur. Leg alle wasbenodigdheden vooraf binnen handbereik. Leg kleding in volgorde klaar om autonomie te stimuleren. Evalueer badkamerveiligheid."
+                interventions: "Verifieer gewenste watertemperatuur. Leg alle wasbenodigdheden vooraf binnen handbereik. Leg kleding in volgorde klaar om autonomie te stimuleren."
             },
             2: {
                 title: "Fiche Dementie & Cognitieve achteruitgang (Gordon Patroon 6)",
                 questions: "Heeft de patiënt een gekende diagnose van dementie? Is er sprake van dwaalgedrag of desoriëntatie in tijd/ruimte?",
                 observations: "Herhaalt constant dezelfde vragen, herkent naaste familieleden wisselend, dwaalt 's nachts.",
                 causes: "Progressieve neurodegeneratieve achteruitgang (Ziekte van Alzheimer).",
-                interventions: "Bied een strikte, voorspelbare dagstructuur aan. Spreek in korte, duidelijke zinnen. Gebruik visuele oriëntatiehulpmiddelen (grote klok, kalender). Schakel Dienst Beter Thuis in voor omgevingsbeveiliging."
+                interventions: "Bied een strikte, voorspelbare dagstructuur aan. Spreek in korte, duidelijke zinnen. Gebruik visuele oriëntatiehulpmiddelen (grote klok, kalender)."
             },
             3: {
-                title: "Fiche Psychiatrische Coping & Psychische kwetsbaarheid (Gordon Patroon 10)",
-                questions: "Ervaart de patiënt actieve hallucinaties of paranoïde waanbeelden? Worden de psychiatrische geneesmiddelen compliant ingenomen?",
-                observations: "Extreme paniek, verbale agressie t.g.v. wantrouwen, weigering van antipsychotica.",
-                causes: "Neurobiologische kwetsbaarheid (schizofrenie/psychose).",
-                interventions: "Zorg voor een prikkelarme omgeving. Verwijder potentieel gevaarlijke voorwerpen. Straal absolute rust uit. Raak de patiënt nooit onverwacht aan. Contacteer direct de GGZ-coördinator bij escalatie."
+                title: "Slaap- & Rustpatroon (Gordon Patroon 5) & Psychische Coping",
+                questions: "Ervaart de patiënt inslaap- of doorslaapproblemen door angst, somberheid of piekeren? Is er overdag sprake van extreme vermoeidheid?",
+                observations: "Moeizame ochtendopstart, wallen onder de ogen, uitspraken over angst of angstaanvallen, piekergedrag bij herhaaldelijke bezoeken.",
+                causes: "Psychische spanning, existentiële angst t.g.v. chronische pathologie, verstoord dag-nachtritme.",
+                interventions: "Creëer een rustgevend avondritueel. Minimaliseer cafeïne-inname vanaf de namiddag. Bespreek angsten en piekergedachten overdag. Overweeg psychologische ondersteuning of een ontspannende massage tijdens het avondbezoek."
             },
             4: {
                 title: "Fiche Gedragsproblemen & Zorgverzet (Gordon Patroon 8)",
                 questions: "Verzet de patiënt zich actief tegen de noodzakelijke dagelijkse verzorging? Treedt er agressie op?",
                 observations: "Slaan, roepen of weglopen tijdens het wasmoment.",
                 causes: "Angst, overprikkeling of niet-begrijpen van de zorghandeling.",
-                interventions: "Zorg voor een vaste, vertrouwde zorgverlener. Leg elke handeling vooraf rustig uit. Stop de zorg onmiddellijk bij extreme weerstand en probeer het op een later tijdstip opnieuw."
+                interventions: "Zorg voor een vaste, vertrouwde zorgverlener. Leg elke handeling vooraf rustig uit. Stop de zorg onmiddellijk bij extreme weerstand."
             },
             5: {
                 title: "Fiche Voeding, Vocht & Gewichtsverloop (Gordon Patroon 2)",
                 questions: "Is er sprake van ongewenst gewichtsverlies (>10% binnen 6 mnd)? Is de dagelijkse vochtinname kleiner dan 1 liter?",
                 observations: "Droge turgor van de huid, droge mondslijmvliezen, onafgewassen maaltijden in de keuken.",
                 causes: "Slikstoornissen (dysfagie), eenzaamheid of mobiliteitsbeperkingen.",
-                interventions: "Bied dranken aan binnen handbereik. Schakel gezinszorg in voor hulp bij maaltijdbereiding. Monitor de vochtbalans strikt in het dossier. Contacteer huisarts bij aanhoudende dysfagie."
+                interventions: "Bied dranken aan binnen handbereik. Schakel gezinszorg in voor hulp bij maaltijdbereiding. Monitor de vochtbalans strikt in het dossier."
             },
             6: {
                 title: "Fiche Decubitus & Huidintegriteit (Gordon Patroon 2)",
                 questions: "Is er sprake van niet-wegdrukbare roodheid? Gebruikt de patiënt cortisonen of is er sprake van diabetes?",
                 observations: "Niet-wegdrukbare roodheid ter hoogte van het sacrum (stuit).",
                 causes: "Totale immobiliteit, verminderde weefselperfusie door diabetes.",
-                interventions: "Voorzie onmiddellijk een alternating matras. Pas een strikt wisselhoudingsschema toe. Gebruik de hielenlip-techniek om hielen zwevend te leggen. Inspecteer de risicopunten dagelijks."
+                interventions: "Voorzie onmiddellijk een alternating matras. Pas een strikt wisselhoudingsschema toe. Gebruik de hielenlip-techniek om hielen zwevend te leggen."
             },
             7: {
                 title: "Fiche Mantelzorgbelasting & Coping (Gordon Patroon 8)",
                 questions: "Uitte de mantelzorger signalen van extreme fysieke of emotionele uitputting? Is er nood aan professionele hulp?",
                 observations: "Chronische vermoeidheid, slapeloosheid en emotionele droefheid bij de echtgeno(o)t(e).",
                 causes: "24/7 zorgbelasting voor een alleenwonende partner met gevorderde dementie.",
-                interventions: "Organiseer een multidisciplinair overleg (MDO). Start gezinshulp en poetshulp op via Dienst Beter Thuis. Verwijs naar een dagverzorgingscentrum ter ontlasting van de partner."
+                interventions: "Organiseer een multidisciplinair overleg (MDO). Start gezinshulp en poetshulp op via Dienst Beter Thuis. Verwijs naar een dagverzorgingscentrum."
             },
             8: {
                 title: "Fiche Palliatieve Situatie & Levensdoelen (Gordon Patroon 11)",
                 questions: "Is de palliatieve administratie volledig in orde? Welke specifieke wensen zijn er rondom pijnbestrijding en comfortzorg?",
                 observations: "Terminale status, pijn (VAS score 8/10), dyspnoe, existentiële angst.",
                 causes: "Terminale fase van gemetastaseerde longcarcinomen.",
-                interventions: "Contacteer huisarts voor de opstart van het palliatief forfait. Start een nauwgezet pijnbewakingsdossier. Schakel referentieverpleegkundige palliatieve zorg in. Garandeer maximaal ligcomfort."
+                interventions: "Contacteer huisarts voor de opstart van het palliatief forfait. Start een nauwgezet pijnbewakingsdossier. Schakel referentieverpleegkundige palliatieve zorg in."
             }
         };
 
@@ -593,14 +593,14 @@
                 document.getElementById('content-zlo').classList.remove('hidden');
                 document.getElementById('content-vvaz').classList.add('hidden');
                 
-                document.getElementById('tab-zlo').className = "flex-1 py-3.5 px-6 text-center rounded-lg text-emerald-900 font-extrabold text-sm md:text-base flex justify-center items-center space-x-2 transition-all bg-emerald-50 border border-emerald-100";
+                document.getElementById('tab-zlo').className = "flex-1 py-3.5 px-6 text-center rounded-lg text-[#113B6B] font-extrabold text-sm md:text-base flex justify-center items-center space-x-2 transition-all bg-[#FEF5EC] border border-[#fde2cb]";
                 document.getElementById('tab-vvaz').className = "flex-1 py-3.5 px-6 text-center rounded-lg text-slate-500 font-medium text-sm md:text-base flex justify-center items-center space-x-2 transition-all hover:text-slate-800 hover:bg-slate-50";
             } else {
                 document.getElementById('content-zlo').classList.add('hidden');
                 document.getElementById('content-vvaz').classList.remove('hidden');
                 
                 document.getElementById('tab-zlo').className = "flex-1 py-3.5 px-6 text-center rounded-lg text-slate-500 font-medium text-sm md:text-base flex justify-center items-center space-x-2 transition-all hover:text-slate-800 hover:bg-slate-50";
-                document.getElementById('tab-vvaz').className = "flex-1 py-3.5 px-6 text-center rounded-lg text-emerald-900 font-extrabold text-sm md:text-base flex justify-center items-center space-x-2 transition-all bg-emerald-50 border border-emerald-100";
+                document.getElementById('tab-vvaz').className = "flex-1 py-3.5 px-6 text-center rounded-lg text-[#113B6B] font-extrabold text-sm md:text-base flex justify-center items-center space-x-2 transition-all bg-[#FEF5EC] border border-[#fde2cb]";
                 
                 // Bereken complexiteitstriage & render de VVAZ fiches
                 calculateComplexity();
@@ -617,7 +617,7 @@
             options.forEach(opt => {
                 const btn = document.getElementById(`q${qNum}-${opt}`);
                 if (opt === value) {
-                    btn.className = "px-3.5 py-1.5 text-xs font-bold rounded-lg bg-emerald-800 text-white shadow-sm";
+                    btn.className = "px-3.5 py-1.5 text-xs font-bold rounded-lg bg-[#113B6B] text-white shadow-sm";
                 } else {
                     btn.className = "px-3.5 py-1.5 text-xs font-semibold rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-100";
                 }
@@ -658,7 +658,7 @@
                 // Gordon mapping renderen
                 gordonMapping[i].forEach(fiche => {
                     const el = document.createElement('div');
-                    el.className = `p-2 rounded text-xs transition-all ${isActive ? 'bg-emerald-50 text-emerald-950 border border-emerald-200 font-bold' : 'bg-emerald-950/20 text-emerald-300/40 opacity-40'}`;
+                    el.className = `p-2 rounded text-xs transition-all ${isActive ? 'bg-[#FEF5EC] text-[#113B6B] border border-[#fde2cb] font-bold' : 'bg-slate-200 text-slate-400 opacity-40'}`;
                     el.innerText = (isActive ? "✓ " : "○ ") + fiche;
                     gordonList.appendChild(el);
                 });
@@ -667,7 +667,7 @@
                 if (i <= 5 && isActive) hasBelraiTrigger = true;
                 screenerMapping[i].forEach(fiche => {
                     const el = document.createElement('div');
-                    el.className = `p-2 rounded text-xs transition-all ${isActive ? 'bg-amber-100 text-amber-950 border border-amber-200 font-bold' : 'bg-emerald-950/20 text-emerald-300/40 opacity-40'}`;
+                    el.className = `p-2 rounded text-xs transition-all ${isActive ? 'bg-amber-100 text-amber-950 border border-amber-200 font-bold' : 'bg-slate-200 text-slate-400 opacity-40'}`;
                     el.innerText = (isActive ? "✓ " : "○ ") + fiche;
                     screenerList.appendChild(el);
                 });
@@ -675,7 +675,7 @@
                 // HomeCare mapping renderen
                 hcMapping[i].forEach(fiche => {
                     const el = document.createElement('div');
-                    el.className = `p-2 rounded text-xs transition-all ${isActive ? 'bg-blue-100 text-blue-950 border border-blue-200 font-bold' : 'bg-emerald-950/20 text-emerald-300/40 opacity-40'}`;
+                    el.className = `p-2 rounded text-xs transition-all ${isActive ? 'bg-blue-100 text-blue-950 border border-blue-200 font-bold' : 'bg-slate-200 text-slate-400 opacity-40'}`;
                     el.innerText = (isActive ? "✓ " : "○ ") + fiche;
                     hcList.appendChild(el);
                 });
@@ -747,8 +747,8 @@
                     div.className = "bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3";
                     div.innerHTML = `
                         <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-                            <h4 class="text-sm font-bold text-slate-800 flex items-center">
-                                <span class="bg-amber-100 text-amber-800 p-1 rounded-lg text-xs mr-2 font-bold">Fiche</span> ${data.title}
+                            <h4 class="text-sm font-bold text-[#113B6B] flex items-center">
+                                <span class="bg-[#FEF5EC] text-[#E67E22] p-1 rounded-lg text-xs mr-2 font-bold">Fiche</span> ${data.title}
                             </h4>
                             <span class="text-xs text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded-md">✓ Actief getriggerd</span>
                         </div>
@@ -763,7 +763,7 @@
                                 <span class="font-bold text-slate-500">3. Klinische Oorzaken (E):</span>
                                 <p class="text-slate-700 mt-1">${data.causes}</p>
                                 <span class="font-bold text-slate-500 mt-3 block">4. Verpleegkundige Interventies (Stap 4 SVH):</span>
-                                <p class="text-emerald-950 mt-1 font-semibold">${data.interventions}</p>
+                                <p class="text-[#113B6B] mt-1 font-semibold">${data.interventions}</p>
                             </div>
                         </div>
                     `;
