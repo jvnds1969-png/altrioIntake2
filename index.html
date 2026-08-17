@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altrio Home - Geïntegreerd Intake & Triage Systeem</title>
+    <title>Altrio Home - Geïntegreerd Intake & Triage Systeem (v5)</title>
     <!-- Tailwind CSS voor een moderne, professionele UI -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -117,7 +117,7 @@
                             </div>
                             <div class="md:col-span-2">
                                 <label class="block text-xs font-bold text-slate-500 mb-1">Persoonlijk Levensdoel (Quintuple Aim - Patiënt Centraal)</label>
-                                <textarea id="levensdoel" rows="2" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition" placeholder="Wat is voor deze patiënt echt belangrijk in het leven? (Bijv. zelfstandig koffie kunnen zetten, pijnvrij de kleinkinderen ontvangen, comfortabel thuis sterven...)">Zelfstandig koffie kunnen zetten en comfortabel thuis sterven.</textarea>
+                                <textarea id="levensdoel" rows="2" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] transition" placeholder="Wat is voor deze patiënt echt belangrijk in het leven? (Bijv. zelfstandig koffie kunnen zetten...)">Zelfstandig koffie kunnen zetten en comfortabel thuis sterven.</textarea>
                             </div>
                         </div>
                     </div>
@@ -165,8 +165,8 @@
                                 </select>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-slate-500 mb-1">Gekoppelde VVAZ Teamleden</label>
-                                <input type="text" id="vvazTeam" value="VVAZ: Sophie Peeters & Back-up: Jan Claes" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-600 focus:outline-none" readonly>
+                                <label class="block text-xs font-bold text-slate-500 mb-1">Gekoppelde APcoach / VVAZ</label>
+                                <input type="text" id="vvazTeam" value="APcoach: Sophie Peeters (VVAZ Niveau 6)" class="w-full bg-slate-100 border border-slate-200 rounded-lg px-3 py-2 text-sm text-slate-600 focus:outline-none" readonly>
                             </div>
                         </div>
                         
@@ -175,7 +175,7 @@
                             <span class="text-2xl">🚨</span>
                             <div>
                                 <h4 class="font-extrabold text-sm text-rose-950">VEILIGHEIDSSTOP: Intake Geblokkeerd!</h4>
-                                <p class="text-xs mt-0.5 text-rose-800/90 leading-relaxed">Er is op deze geografische ronde momenteel geen actieve VVAZ (Niveau 6) gekoppeld. Om de klinische regie en wettelijke compliance te garanderen, blokkeert Care-Ace de planning en opstart op deze ronde.</p>
+                                <p class="text-xs mt-0.5 text-rose-800/90 leading-relaxed">Er is op deze geografische ronde momenteel geen actieve APcoach/VVAZ (Niveau 6) gekoppeld. Om de klinische regie en wettelijke compliance te garanderen, blokkeert Care-Ace de planning en opstart op deze ronde.</p>
                             </div>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                             <!-- Vraag 3 -->
                             <div class="p-3.5 rounded-xl flex flex-col lg:flex-row justify-between items-start lg:items-center border border-amber-200 bg-[#FFFDF9] hover:bg-[#FFFDF4] transition">
                                 <div class="max-w-xl mb-3 lg:mb-0">
-                                    <h4 class="text-sm font-bold text-slate-800">3. Psychisch functioneren & Slaap/Rust <span class="text-xs text-[#E67E22] font-semibold">(Triggert Gordon Patroon 5!)</span></h4>
+                                    <h4 class="text-sm font-bold text-slate-800">3. Psychisch functioneren & Slaap/Rust <span class="text-xs text-[#E67E22] font-semibold">(Triggert Gordon Patroon 5 & Coping!)</span></h4>
                                     <p class="text-xs text-slate-500 mt-0.5">Angst, somberheid, piekeren, slaapstoornissen of constante vermoeidheid?</p>
                                 </div>
                                 <div class="flex space-x-1.5 self-end lg:self-auto font-sans">
@@ -336,7 +336,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 border-b border-slate-100 pb-4">
                     <div>
                         <h2 class="text-xl font-black text-[#113B6B]">VVAZ Mobiele Intake & Triage (Klinische Regie)</h2>
-                        <p class="text-xs text-slate-500 mt-0.5">Voer hier de definitieve registraties en eventuele overrules uit.</p>
+                        <p class="text-xs text-slate-500 mt-0.5">Uitgevoerd door de Altriopuntcoach (APcoach) tijdens het huisbezoek.</p>
                     </div>
                     <!-- Complexiteit Badge -->
                     <div class="mt-3 md:mt-0 flex items-center space-x-2">
@@ -345,17 +345,17 @@
                     </div>
                 </div>
 
-                <!-- Patiënt details & Levensdoelen (NU VOLLEDIG INTERACTIEF / AANPASBAAR!) -->
+                <!-- Patiënt details (NU VOLLEDIG INTERACTIEF / AANPASBAAR!) -->
                 <div class="bg-slate-50 p-5 rounded-2xl mb-6 border border-slate-200 grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <div class="space-y-3">
                         <h3 class="text-xs font-extrabold text-[#113B6B] uppercase tracking-wider border-b border-slate-200 pb-1">Administratieve gegevens</h3>
                         <div>
                             <label class="block text-[11px] font-bold text-slate-400">Naam Patiënt</label>
-                            <input type="text" id="vvaz-name" class="w-full bg-white border border-slate-200 rounded px-2.5 py-1.5 text-sm font-bold text-slate-800 focus:ring-1 focus:ring-[#113B6B] outline-none">
+                            <input type="text" id="vvaz-name" class="w-full bg-white border border-slate-200 rounded px-2.5 py-1.5 text-sm font-bold text-slate-800 focus:ring-1 focus:ring-[#113B6B] outline-none" oninput="syncToZlo()">
                         </div>
                         <div>
                             <label class="block text-[11px] font-bold text-slate-400">Rijksregisternummer (RRN)</label>
-                            <input type="text" id="vvaz-rrn" class="w-full bg-white border border-slate-200 rounded px-2.5 py-1.5 text-sm font-semibold text-slate-800 focus:ring-1 focus:ring-[#113B6B] outline-none">
+                            <input type="text" id="vvaz-rrn" class="w-full bg-white border border-slate-200 rounded px-2.5 py-1.5 text-sm font-semibold text-slate-800 focus:ring-1 focus:ring-[#113B6B] outline-none" oninput="syncToZlo()">
                         </div>
                         <div>
                             <label class="block text-[11px] font-bold text-slate-400">Zorgduur</label>
@@ -382,31 +382,54 @@
                     <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
                         <div>
                             <h3 class="text-xs font-extrabold text-[#E67E22] uppercase tracking-wider mb-2">Patiënt-Levensdoel (Quintuple Aim)</h3>
-                            <textarea id="vvaz-levensdoel" rows="3" class="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1.5 text-xs italic text-slate-700 focus:ring-1 focus:ring-[#113B6B] outline-none" placeholder="Levensdoel invullen..."></textarea>
+                            <textarea id="vvaz-levensdoel" rows="3" class="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-1.5 text-xs italic text-slate-700 focus:ring-1 focus:ring-[#113B6B] outline-none" oninput="syncToZlo()"></textarea>
                         </div>
-                        <p class="text-[10px] text-slate-400 mt-2">Draagt bij aan de kwaliteit van de woonzorg.</p>
+                        <p class="text-[10px] text-slate-400 mt-2">Draagt direct bij aan de kwaliteit van de zorg en sturing van de SVH-cyclus.</p>
                     </div>
                 </div>
 
-                <!-- Dynamische Gordon Fiches (NU VOLLEDIG INTERACTIEF EN MUTABLE!) -->
+                <!-- SECTIE: MEDISCHE VOORSCHRIFTEN (RECIP-E INTEGRATIE!) -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 mb-6 space-y-4">
+                    <h3 class="text-md font-bold text-[#113B6B] flex items-center border-b border-slate-100 pb-2">
+                        <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg mr-2 text-xs font-bold">🩺</span> Medische Voorschriften & B2-Machtigingen
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-2 space-y-3">
+                            <label class="block text-xs font-bold text-slate-500">Haal voorschrift digitaal op via Recip-e (Voer RID/Barcode in)</label>
+                            <div class="flex space-x-2">
+                                <input type="text" id="recipeRid" placeholder="b.v. BE-RID-1234-5678-9012" class="flex-1 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#113B6B] uppercase font-mono tracking-wider">
+                                <button onclick="fetchRecipe()" class="bg-[#113B6B] hover:bg-sky-900 text-white font-bold px-4 py-2 rounded-lg text-xs transition">Haal op</button>
+                            </div>
+                            <div id="recipeResult" class="hidden text-xs p-3 rounded-lg border"></div>
+                        </div>
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col justify-center items-center text-center">
+                            <span class="text-2xl mb-1">📤</span>
+                            <span class="text-xs font-bold text-slate-600">Of upload handmatig (PDF/Foto)</span>
+                            <input type="file" id="manualUpload" onchange="manualPrescriptionUpload()" class="hidden">
+                            <button onclick="document.getElementById('manualUpload').click()" class="mt-2 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 font-bold px-3 py-1.5 rounded-lg text-[11px] shadow-sm">Kies bestand</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamische Gordon Fiches (MET VOLLEDIGE MUTABILITEIT EN AUTOMATISCHE DOORSTROMING!) -->
                 <div class="space-y-6" id="dynamic-fiches-container">
                     <!-- Fiches worden hier live gerenderd op basis van triggers -->
                 </div>
 
-                <!-- CLINICAL OVERRULE & COMPLEXITY DETERMINATION (DE KERN VAN JE VRAAG!) -->
+                <!-- CLINICAL OVERRULE & COMPLEXITY DETERMINATION (DE KERN VAN COMPLEXITEITSBEPALING!) -->
                 <div class="bg-[#FFFDF9] p-6 rounded-2xl border border-amber-200 mt-8 shadow-inner">
                     <h3 class="text-lg font-black text-[#113B6B] mb-4 flex items-center">
                         <span class="bg-[#F29111] text-white px-2 py-0.5 rounded-lg mr-2 text-xs">⚖️</span> Wetenschappelijke Complexiteit & Klinische Overrule
                     </h3>
                     
                     <p class="text-xs text-slate-600 mb-6 leading-relaxed">
-                        Volgens de kaders van <strong>UHasselt (Bergs et al.)</strong> en <strong>Huber et al.</strong> berust complexiteit niet enkel op data, maar op verpleegkundig oordeel (<em>enacted judgement</em>). Beoordeel hieronder de 6 wetenschappelijke assen en overrule zo nodig de berekende complexiteit van de computer.
+                        Volgens de kaders van <strong>UHasselt (Bergs et al.)</strong> en <strong>Huber et al.</strong> berust complexiteit niet enkel op data, maar op verpleegkundig oordeel (<em>enacted judgement</em>). Beoordeel hieronder de 6 wetenschappelijke assen. Care-Ace stelt automatisch een bevoegd zorgprofiel voor.
                     </p>
 
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
                         <!-- De 6 Assen van Huber (Beoordelingsschijf) -->
                         <div class="lg:col-span-2 bg-white p-4 rounded-xl border border-slate-200">
-                            <h4 class="text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-3">De 6 Complexiteits-assen van Huber (Vink aan wat van toepassing is)</h4>
+                            <h4 class="text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-3">De 6 Complexiteits-assen van Huber (Beoordeel de risicofactoren)</h4>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                                 <label class="flex items-start space-x-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
                                     <input type="checkbox" id="as-1" onchange="recalculateCalculatedComplexity()" class="mt-0.5 text-[#113B6B] rounded border-slate-300">
@@ -419,7 +442,7 @@
                                     <input type="checkbox" id="as-2" onchange="recalculateCalculatedComplexity()" class="mt-0.5 text-[#113B6B] rounded border-slate-300">
                                     <div>
                                         <span class="font-bold block text-slate-800">2. Hoge complicatierisico's</span>
-                                        <span class="text-[11px] text-slate-500">Kans op acute ontregeling, sepsis, bloedingen of ernstige decubitus.</span>
+                                        <span class="text-[11px] text-slate-500">Kans op acute ontregeling, sepsis, of ernstige decubitus.</span>
                                     </div>
                                 </label>
                                 <label class="flex items-start space-x-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
@@ -447,89 +470,126 @@
                                     <input type="checkbox" id="as-6" onchange="recalculateCalculatedComplexity()" class="mt-0.5 text-[#113B6B] rounded border-slate-300">
                                     <div>
                                         <span class="font-bold block text-slate-800">6. Beperkte VVAZ-bereikbaarheid</span>
-                                        <span class="text-[11px] text-slate-500">Complexiteitsfactor door fysieke of logistieke afstand tot back-up hulp.</span>
+                                        <span class="text-[11px] text-slate-500">Fysieke of logistieke afstand tot noodzakelijke back-up.</span>
                                     </div>
                                 </label>
                             </div>
                         </div>
 
                         <!-- Klinisch Overrule Paneel -->
-                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
-                            <h4 class="text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">De Beslissing van de VVAZ</h4>
+                        <div class="bg-white p-4 rounded-xl border border-slate-200 flex flex-col justify-between text-xs">
+                            <h4 class="text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">De Beslissing van de APcoach</h4>
                             <div class="space-y-4">
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-500 mb-1">Definitieve complexiteitsstatus:</label>
-                                    <select id="overruledComplexity" onchange="handleComplexityOverrule()" class="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-2 text-xs font-bold text-slate-800 outline-none focus:ring-1 focus:ring-[#113B6B]">
-                                        <option value="CALCULATED">Berekende status volgen</option>
-                                        <option value="GREEN">GROEN (Minder Complex)</option>
-                                        <option value="ORANGE">ORANJE (Matig Complex)</option>
-                                        <option value="RED">ROOD (Complex / Hoog Risico)</option>
+                                    <span class="block font-bold text-slate-500 mb-1">Toewijzingsvoorstel systeem:</span>
+                                    <div id="systemProposalText" class="p-2.5 rounded-lg font-bold bg-slate-100 text-slate-700">GROEN - Zorgkundige / Basisverpleegkundige</div>
+                                </div>
+                                <div>
+                                    <label class="block font-bold text-slate-500 mb-1">Definitieve toewijzing & overrule:</label>
+                                    <select id="overruledComplexity" onchange="handleComplexityOverrule()" class="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-2 font-bold text-[#113B6B] outline-none focus:ring-1 focus:ring-[#113B6B]">
+                                        <option value="CALCULATED">Automatisch systeemvoorstel volgen</option>
+                                        <option value="ZK">Zorgkundige (Licht complex / ADL-delegeerbaar)</option>
+                                        <option value="BV">Basisverpleegkundige (Licht tot matig complex)</option>
+                                        <option value="APCOACH">APcoach / VVAZ Niveau 6 (Complex / Hoog Risico)</option>
                                     </select>
                                 </div>
                                 <div id="overruleReasonContainer" class="hidden">
-                                    <label class="block text-xs font-bold text-rose-800 mb-1">Verplichte klinische argumentatie:</label>
-                                    <textarea id="overruleReason" rows="3" class="w-full bg-rose-50/50 border border-rose-200 rounded p-2 text-xs text-rose-950 placeholder-rose-700 focus:outline-none focus:ring-1 focus:ring-rose-500" placeholder="Motiveer waarom u afwijkt van de automatische berekening..."></textarea>
+                                    <label class="block font-bold text-rose-800 mb-1">Verplichte klinische argumentatie (RIZIV):</label>
+                                    <textarea id="overruleReason" rows="3" class="w-full bg-rose-50/50 border border-rose-200 rounded p-2 text-rose-950 placeholder-rose-700 focus:outline-none focus:ring-1 focus:ring-rose-500" placeholder="Motiveer waarom u afwijkt van de automatische berekening..."></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Zorgplanning & Compliance (Ingevuld op basis van eerdere stappen) -->
-                <div class="bg-slate-100 p-6 rounded-2xl border border-slate-200 mt-6">
-                    <h3 class="text-lg font-extrabold text-[#113B6B] mb-4 flex items-center">
-                        <span class="bg-[#113B6B] text-white p-1 rounded-lg mr-2 text-xs">📋</span> Concept-Zorgplan & Compliance Checks
-                    </h3>
+                <!-- HET INTEGRALE ZORGPLAN (ÉÉN DOCUMENT MET TWEE VISUELE KLEURZONES!) -->
+                <div class="border border-slate-200 rounded-3xl overflow-hidden mt-8 shadow-md">
+                    <!-- Titelbalk -->
+                    <div class="bg-[#113B6B] text-white px-6 py-4 flex justify-between items-center border-b-4 border-[#F29111]">
+                        <div>
+                            <h3 class="text-lg font-extrabold">Geïntegreerd Zorgplan in Care-Ace</h3>
+                            <p class="text-[11px] text-slate-200">Enkel, sluitend dossier met visuele scheiding voor wetgeving en kwaliteitszorg.</p>
+                        </div>
+                        <span class="text-xs font-black uppercase bg-[#F29111] text-[#113B6B] px-3 py-1 rounded">Eén Zorgplan</span>
+                    </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 font-sans">
-                        <!-- Deel A (Wettelijk minimum) -->
-                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                            <h4 class="text-sm font-extrabold text-slate-800 border-b border-slate-100 pb-2 mb-3 uppercase tracking-wider">DEEL A: RIZIV & Compliance Minimum</h4>
-                            <div class="space-y-4 text-xs">
-                                <div>
-                                    <label class="block font-bold text-slate-600 mb-1">Coördinerende & Back-up VVAZ (Min. 2 verplicht)</label>
-                                    <input type="text" value="VVAZ 1: Sophie Peeters (Visumnummer: 1234567) • VVAZ 2: Jan Claes (Visumnummer: 7654321)" class="w-full bg-slate-50 border border-slate-200 rounded px-2.5 py-2 focus:outline-none font-medium text-slate-700">
-                                </div>
-                                <div>
-                                    <label class="block font-bold text-slate-600 mb-1">Gekoppelde Medische Voorschriften</label>
-                                    <div class="p-2.5 bg-[#FEF5EC] text-[#E67E22] rounded-lg border border-[#fde2cb] font-bold flex items-center space-x-1.5">
-                                        <span>✓</span> <span>Medisch voorschrift aanwezig en gekoppeld voor B2-handelingen.</span>
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        
+                        <!-- ZONE A: RIZIV & COMPLIANCE MINIMUM (🏛️ Blauwe/Neutrale Zone) -->
+                        <div class="bg-white p-6 border-r border-slate-100 space-y-5">
+                            <div class="flex items-center space-x-2 border-b border-slate-100 pb-2">
+                                <span class="text-xl">🏛️</span>
+                                <h4 class="text-sm font-extrabold text-[#113B6B] uppercase tracking-wider">Zone A: RIZIV & Compliance Minimum</h4>
+                            </div>
+                            
+                            <div class="space-y-3.5 text-xs text-slate-700">
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <span class="font-bold text-slate-400 block">Patiënt & RRN:</span>
+                                        <span id="plan-patient" class="font-extrabold text-slate-800">-</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-bold text-slate-400 block">Wettelijke Triage-Status:</span>
+                                        <span id="plan-status" class="font-extrabold text-slate-800">-</span>
                                     </div>
                                 </div>
-                                <div>
-                                    <label class="block font-bold text-slate-600 mb-1">Gegenereerde PES-Diagnose (SVH-Cyclus)</label>
-                                    <textarea rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 focus:outline-none font-mono text-[11px] text-slate-700 leading-relaxed" readonly id="pes-output"></textarea>
+
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <span class="font-bold text-slate-400 block">Verantwoordelijke APcoach:</span>
+                                        <span class="font-extrabold text-[#113B6B]">Sophie Peeters (VVAZ Niveau 6)</span>
+                                    </div>
+                                    <div>
+                                        <span class="font-bold text-slate-400 block">Gekoppelde Recip-e RID:</span>
+                                        <span id="plan-recipe" class="font-mono font-bold text-emerald-700">Geen voorschrift gekoppeld</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <span class="font-bold text-slate-400 block">Gegenereerde PES-Diagnoses (Stromen automatisch door!):</span>
+                                    <textarea id="pes-output" rows="6" class="w-full bg-slate-50 border border-slate-200 rounded-lg p-2.5 font-mono text-[11px] text-slate-700 leading-relaxed focus:outline-none" readonly></textarea>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Deel B (Kwaliteitswaarborg) -->
-                        <div class="bg-[#FFFDF9] p-5 rounded-xl border border-amber-200/80 shadow-sm">
-                            <h4 class="text-sm font-extrabold text-amber-900 border-b border-amber-200 pb-2 mb-3 uppercase tracking-wider">DEEL B: Kwaliteitswaarborg (Woonzorg)</h4>
+                        <!-- ZONE B: KWALITEITSWAARBORG & WOONZORG (✨ Amber/Lichtoranje Zone) -->
+                        <div class="bg-[#FFFDF9] p-6 space-y-5">
+                            <div class="flex items-center space-x-2 border-b border-amber-200 pb-2">
+                                <span class="text-xl">✨</span>
+                                <h4 class="text-sm font-extrabold text-amber-900 uppercase tracking-wider">Zone B: Kwaliteitswaarborg & Woonzorg</h4>
+                            </div>
+
                             <div class="space-y-4 text-xs">
                                 <div>
-                                    <label class="block font-bold text-amber-800 mb-1">Aanpassingsruimte voor de Basisverpleegkundige (BV)</label>
-                                    <input type="text" value="De BV mag autonoom de frequentie van de hygiënische zorg verhogen op warme zomerdagen." class="w-full bg-white border border-amber-200 rounded px-2.5 py-2 focus:outline-none focus:ring-1 focus:ring-amber-500 font-medium text-amber-900">
+                                    <span class="font-bold text-amber-800 block mb-1">Persoonlijk Levensdoel (Quintuple Aim):</span>
+                                    <div id="plan-levensdoel" class="p-2.5 bg-white border border-amber-200 rounded-lg italic font-medium text-slate-800">Geen levensdoel opgegeven</div>
                                 </div>
+
                                 <div>
-                                    <label class="block font-bold text-amber-800 mb-1">Patiëntspecifieke Alarmsignalen & Escalatielijn</label>
-                                    <input type="text" value="Bij koorts > 38.3°C of plotse verwardheid: direct bellen naar VVAZ Sophie (0475/XX.XX.XX)" class="w-full bg-white border border-amber-200 rounded px-2.5 py-2 focus:outline-none focus:ring-1 focus:ring-amber-500 font-medium text-amber-900">
+                                    <label class="block font-bold text-amber-800 mb-1">Autonome Aanpassingsruimte voor de Basisverpleegkundige (BV):</label>
+                                    <input type="text" id="plan-bvSpeling" value="De BV mag autonoom de frequentie van de hygiënische zorg verhogen op warme zomerdagen of bij diarree." class="w-full bg-white border border-amber-200 rounded-lg px-2.5 py-2 font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-amber-500">
                                 </div>
+
                                 <div>
-                                    <label class="block font-bold text-amber-800 mb-1">Flexibele Planning (Schijnzelfstandigheid-compliance)</label>
-                                    <p class="text-[11px] text-amber-700/80 mb-2 font-medium">⚠️ RIZIV Compliance-regel: Er mogen absoluut geen specifieke uren (zoals "9:00 uur") in het zorgplan worden opgenomen wegens schijnzelfstandigheids-risico's. Plan uitsluitend in brede dagdelen:</p>
-                                    <div class="flex space-x-4">
+                                    <label class="block font-bold text-amber-800 mb-1">Patiëntspecifieke Alarmsignalen & Escalatielijn:</label>
+                                    <input type="text" id="plan-escalatie" value="Bij koorts > 38.3°C of plotse verwardheid: direct bellen naar APcoach Sophie (0475/12.34.56)." class="w-full bg-white border border-amber-200 rounded-lg px-2.5 py-2 font-medium text-slate-700 focus:outline-none focus:ring-1 focus:ring-amber-500">
+                                </div>
+
+                                <div>
+                                    <span class="font-bold text-amber-800 block mb-1.5">Geografische inplanning (Schijnzelfstandigheids-compliance):</span>
+                                    <p class="text-[10px] text-amber-700/80 mb-2">⚠️ RIZIV-regel: Plannen op vaste uren (zoals "9:00 uur") is verboden wegens schijnzelfstandigheid. Selecteer uitsluitend dagdelen:</p>
+                                    <div class="flex space-x-4 font-bold text-amber-950">
                                         <label class="flex items-center space-x-1.5 cursor-pointer">
                                             <input type="radio" name="dagdeel" class="text-[#113B6B] focus:ring-[#113B6B]" checked>
-                                            <span class="font-bold text-amber-900">Ochtend</span>
+                                            <span>Ochtend</span>
                                         </label>
                                         <label class="flex items-center space-x-1.5 cursor-pointer">
                                             <input type="radio" name="dagdeel" class="text-[#113B6B] focus:ring-[#113B6B]">
-                                            <span class="font-bold text-amber-900">Voormiddag</span>
+                                            <span>Voormiddag</span>
                                         </label>
                                         <label class="flex items-center space-x-1.5 cursor-pointer">
                                             <input type="radio" name="dagdeel" class="text-[#113B6B] focus:ring-[#113B6B]">
-                                            <span class="font-bold text-amber-900">Namiddag</span>
+                                            <span>Namiddag</span>
                                         </label>
                                     </div>
                                 </div>
@@ -538,10 +598,10 @@
                     </div>
                 </div>
 
-                <!-- Actieknop -->
+                <!-- Actieknop: Stuur naar ReCo voor Planning -->
                 <div class="mt-8 flex justify-end">
-                    <button onclick="signZorgplan()" class="bg-[#113B6B] hover:bg-sky-900 text-white font-extrabold py-3 px-6 rounded-xl text-sm transition-all shadow-md flex items-center space-x-2 border-b-2 border-slate-900">
-                        <span>✍️ Bekrachtig en Activeer Zorgplan in Care-Ace</span>
+                    <button onclick="signZorgplan()" class="bg-[#113B6B] hover:bg-sky-900 text-white font-extrabold py-3.5 px-6 rounded-xl text-sm transition-all shadow-md flex items-center space-x-2 border-b-2 border-slate-900">
+                        <span>✍️ Bekrachtig Zorgplan & Stuur naar ReCo voor Planning</span>
                     </button>
                 </div>
             </div>
@@ -549,9 +609,9 @@
 
     </main>
 
-    <!-- JavaScript voor dynamische interactie -->
+    <!-- JavaScript voor de dynamische interface -->
     <script>
-        // Startstatus van de 8 vragen
+        // Startstatus van de 8 startvragen
         const answers = {
             1: 'ja',      // ADL (standaard ja)
             2: 'nee',     // Cognitie
@@ -578,7 +638,7 @@
         // Gekoppelde fiches per startvraag voor Fase 2 (BelRAI Screener)
         const screenerMapping = {
             1: ["Module 2: ADL - Functioneren (Persoonlijke hygiëne & Mobiliteit)"],
-            2: ["Module 3: Cognieve problemen (Geheugen & Besluitvorming)"],
+            2: ["Module 3: Cognitieve problemen (Geheugen & Besluitvorming)"],
             3: ["Module 4: Psychische problemen (Suïciderisico, Zorgonvermogen)"],
             4: ["Module 5: Gedragsproblemen (Ronddolen, Verbaal/Lichamelijk geweld)"],
             5: ["Module 1: IADL - Instrumentele Activiteiten (Koken, Huishouden, Medicatie)"],
@@ -599,7 +659,7 @@
             8: ["Module 18: Ontslagmogelijkheden & Algemene Toestand", "Module 19: Ontslaginformatie"]
         };
 
-        // Inhoud voor de fiches
+        // Inhoud voor de mobiele klinische fiches
         const clinicalFichesData = {
             1: {
                 title: "Fiche Wassen & Lichaamsverzorging (Gordon Patroon 4)",
@@ -609,7 +669,6 @@
                     "Schimmel- of kalknagels geobserveerd",
                     "Verhoogd valrisico aanwezig in de badkamer"
                 ],
-                questions: "Kan de patiënt zelf de rug en voeten wassen? Heeft de patiënt schimmel- of kalknagels? Is er een verhoogd valrisico in de badkamer?",
                 observations: "Droge, schilferige huid, onverzorgde nagels, instabiele transfers.",
                 causes: "Ernstige osteoporose, spierzwakte en evenwichtsstoornissen.",
                 interventions: "Verifieer gewenste watertemperatuur. Leg alle wasbenodigdheden vooraf binnen handbereik. Leg kleding in volgorde klaar om autonomie te stimuleren."
@@ -622,7 +681,6 @@
                     "Dwaalgedrag geconstateerd",
                     "Periodieke acute verwardheid"
                 ],
-                questions: "Heeft de patiënt een gekende diagnose van dementie? Is er sprake van dwaalgedrag of desoriëntatie in tijd/ruimte?",
                 observations: "Herhaalt constant dezelfde vragen, herkent naaste familieleden wisselend, dwaalt 's nachts.",
                 causes: "Progressieve neurodegeneratieve achteruitgang (Ziekte van Alzheimer).",
                 interventions: "Bied een strikte, voorspelbare dagstructuur aan. Spreek in korte, duidelijke zinnen. Gebruik visuele oriëntatiehulpmiddelen (grote klok, kalender)."
@@ -635,7 +693,6 @@
                     "Actieve somberheid, angstgevoelens of piekeren",
                     "Nachtelijk roepen of verhoogde agitatie ('sundowning')"
                 ],
-                questions: "Ervaart de patiënt inslaap- of doorslaapproblemen door angst, somberheid of piekeren? Is er overdag sprake van extreme vermoeidheid?",
                 observations: "Moeizame ochtendopstart, wallen onder de ogen, uitspraken over angst of angstaanvallen, piekergedrag bij herhaaldelijke bezoeken.",
                 causes: "Psychische spanning, existentiële angst t.g.v. chronische pathologie, verstoord dag-nachtritme.",
                 interventions: "Creëer een rustgevend avondritueel. Minimaliseer cafeïne-inname vanaf de namiddag. Bespreek angsten en piekergedachten overdag. Overweeg een ontspannende massage tijdens het avondbezoek."
@@ -648,7 +705,6 @@
                     "Roepend gedrag of storende uitingen",
                     "Wegloopgedrag"
                 ],
-                questions: "Verzet de patiënt zich actief tegen de noodzakelijke dagelijkse verzorging? Treedt er agressie op?",
                 observations: "Slaan, roepen of weglopen tijdens het wasmoment.",
                 causes: "Angst, overprikkeling of niet-begrijpen van de zorghandeling.",
                 interventions: "Zorg voor een vaste, vertrouwde zorgverlener. Leg elke handeling vooraf rustig uit. Stop de zorg onmiddellijk bij extreme weerstand."
@@ -661,7 +717,6 @@
                     "Ongewenst gewichtsverlies >10% in laatste 6 maanden",
                     "Slechte turgor (teken van dehydratatie)"
                 ],
-                questions: "Is er sprake van ongewenst gewichtsverlies (>10% binnen 6 mnd)? Is de dagelijkse vochtinname kleiner dan 1 liter?",
                 observations: "Droge turgor van de huid, droge mondslijmvliezen, onafgewassen maaltijden in de keuken.",
                 causes: "Slikstoornissen (dysfagie), eenzaamheid of mobiliteitsbeperkingen.",
                 interventions: "Bied dranken aan binnen handbereik. Schakel gezinszorg in voor hulp bij maaltijdbereiding. Monitor de vochtbalans strikt in het dossier."
@@ -674,7 +729,6 @@
                     "Chronisch gebruik van cortisonen (risicofactor)",
                     "Actieve diabetes mellitus met neuropathie"
                 ],
-                questions: "Is er sprake van niet-wegdrukbare roodheid? Gebruikt de patiënt cortisonen of is er sprake van diabetes?",
                 observations: "Niet-wegdrukbare roodheid ter hoogte van het sacrum (stuit).",
                 causes: "Totale immobiliteit, verminderde weefselperfusie door diabetes.",
                 interventions: "Voorzie onmiddellijk een alternating matras. Pas een strikt wisselhoudingsschema toe. Gebruik de hielenlip-techniek om hielen zwevend te leggen."
@@ -687,7 +741,6 @@
                     "Mantelzorger woont alleen en is zelf hulpbehoevend",
                     "Risico op breuk in de zorgcontinuïteit"
                 ],
-                questions: "Uitte de mantelzorger signalen van extreme fysieke of emotionele uitputting? Is er nood aan professionele hulp?",
                 observations: "Chronische vermoeidheid, slapeloosheid en emotionele droefheid bij de echtgeno(o)t(e).",
                 causes: "24/7 zorgbelasting voor een alleenwonende partner met gevorderde dementie.",
                 interventions: "Organiseer een multidisciplinair overleg (MDO). Start gezinshulp en poetshulp op via Dienst Beter Thuis. Verwijs naar een dagverzorgingscentrum."
@@ -700,16 +753,63 @@
                     "Nood aan acute comforttherapie of pijnbestrijding",
                     "Existentiële angst of wens tot comfortgericht sterven"
                 ],
-                questions: "Is de palliatieve administratie volledig in orde? Welke specifieke wensen zijn er rondom pijnbestrijding en comfortzorg?",
                 observations: "Terminale status, pijn (VAS score 8/10), dyspnoe, existentiële angst.",
                 causes: "Terminale fase van gemetastaseerde longcarcinomen.",
                 interventions: "Contacteer huisarts voor de opstart van het palliatief forfait. Start een nauwgezet pijnbewakingsdossier. Schakel referentieverpleegkundige palliatieve zorg in."
             }
         };
 
+        // Recip-e database mock
+        function fetchRecipe() {
+            const rid = document.getElementById('recipeRid').value.trim();
+            const resultBox = document.getElementById('recipeResult');
+            
+            if (rid === "") {
+                alert("Voer eerst een geldige RID-code in.");
+                return;
+            }
+
+            resultBox.classList.remove('hidden');
+            resultBox.className = "text-xs p-3 rounded-lg border bg-emerald-50 border-emerald-200 text-emerald-950 font-sans";
+            resultBox.innerHTML = `
+                <div class="font-extrabold text-[12px]">✓ RECP-E VOORSCHRIFT KOPPELING SUCCESVOL</div>
+                <div class="mt-1 font-medium">Gekoppelde arts: Dr. L. Peeters (RIZIV: 1-98765-43-210)</div>
+                <div class="mt-0.5 font-medium">Voorgeschreven handeling: Subcutane toediening van Lage Moleculair Gewicht Heparine (LMGH) - 1x per dag gedurende 10 dagen.</div>
+                <div class="mt-1 font-mono text-[10px] text-emerald-800">RID-Code gekoppeld: ${rid.toUpperCase()}</div>
+            `;
+
+            // Sync to Zone A Care Plan
+            document.getElementById('plan-recipe').innerText = `Gekoppeld: ${rid.toUpperCase()}`;
+            document.getElementById('plan-recipe').className = "font-mono font-bold text-emerald-700";
+        }
+
+        function manualPrescriptionUpload() {
+            const resultBox = document.getElementById('recipeResult');
+            resultBox.classList.remove('hidden');
+            resultBox.className = "text-xs p-3 rounded-lg border bg-blue-50 border-blue-200 text-blue-950 font-sans";
+            resultBox.innerHTML = `
+                <div class="font-extrabold text-[12px]">✓ MANUEEL VOORSCHRIFT GEÜPLOAD</div>
+                <div class="mt-1 font-medium">PDF/Afbeelding succesvol opgeslagen in Care-Ace.</div>
+                <div class="mt-0.5 font-medium">B2-Machtiging actief in het patiëntendossier.</div>
+            `;
+            document.getElementById('plan-recipe').innerText = "Manueel geüpload bestand (.pdf)";
+            document.getElementById('plan-recipe').className = "font-bold text-blue-700";
+        }
+
+        // Synchroniseer gegevens van de Mobiele VVAZ-view terug naar de ZLO-view (geen dubbel werk)
+        function syncToZlo() {
+            document.getElementById('patName').value = document.getElementById('vvaz-name').value;
+            document.getElementById('patRrn').value = document.getElementById('vvaz-rrn').value;
+            document.getElementById('levensdoel').value = document.getElementById('vvaz-levensdoel').value;
+            
+            // Werk ook direct de weergave in Zone B bij
+            document.getElementById('plan-patient').innerText = `${document.getElementById('vvaz-name').value} (${document.getElementById('vvaz-rrn').value})`;
+            document.getElementById('plan-levensdoel').innerText = document.getElementById('vvaz-levensdoel').value;
+        }
+
         // Wisselen tussen de twee portalen
         function switchTab(tab) {
-            // Synchroniseer ingevoerde basisgegevens
+            // Synchroniseer ingevoerde basisgegevens van ZLO naar VVAZ
             const name = document.getElementById('patName').value;
             const rrn = document.getElementById('patRrn').value;
             const levensdoel = document.getElementById('levensdoel').value;
@@ -722,7 +822,6 @@
             const beller = document.getElementById('bellerName').value;
             const bphone = document.getElementById('bellerPhone').value;
             const bRelatie = document.getElementById('bellerRelatie').value;
-            const adlRonde = document.getElementById('adlRonde').value;
 
             // Vul de VVAZ bewerkbare velden in
             document.getElementById('vvaz-name').value = name;
@@ -734,6 +833,10 @@
 
             const durationSelect = document.getElementById('zorgduur');
             document.getElementById('vvaz-zorgduur').value = durationSelect.options[durationSelect.selectedIndex].text;
+
+            // Sync met het Care-Ace Zorgplan (Zone A & B)
+            document.getElementById('plan-patient').innerText = `${name} (${rrn})`;
+            document.getElementById('plan-levensdoel').innerText = levensdoel;
 
             if (tab === 'zlo') {
                 document.getElementById('content-zlo').classList.remove('hidden');
@@ -854,6 +957,7 @@
             for (let i = 1; i <= 8; i++) {
                 if (answers[i] === 'ja' || answers[i] === 'onzeker') {
                     positiveCount++;
+                    // Kritische triggers: Vraag 2 (Cognitie), 4 (Gedragsproblemen), 6 (Technische zorg), 8 (Palliatief)
                     if (i === 2 || i === 4 || i === 6 || i === 8) {
                         criticalTrigger = true;
                     }
@@ -869,31 +973,35 @@
             }
 
             const badge = document.getElementById('complexityBadge');
+            const systemText = document.getElementById('systemProposalText');
             
             if (positiveCount >= 4 || criticalTrigger || huberTickedCount >= 2) {
                 computedComplexity = "RED";
-                badge.innerText = "ROOD (Complex)";
+                badge.innerText = "ROOD (Complex / Hoog Risico)";
                 badge.className = "px-3.5 py-1.5 rounded-full text-xs font-black bg-rose-100 text-rose-800 border border-rose-200 shadow-sm";
+                systemText.innerText = "🔴 APcoach / VVAZ Niveau 6 (Klinische regie vereist)";
+                systemText.className = "p-2.5 rounded-lg font-bold bg-rose-50 border border-rose-200 text-rose-800";
             } else if (positiveCount > 1 || huberTickedCount === 1) {
                 computedComplexity = "ORANGE";
                 badge.innerText = "ORANJE (Matig Complex)";
                 badge.className = "px-3.5 py-1.5 rounded-full text-xs font-black bg-amber-100 text-amber-800 border border-amber-200 shadow-sm";
+                systemText.innerText = "🟡 Basisverpleegkundige (BV) onder supervisie team";
+                systemText.className = "p-2.5 rounded-lg font-bold bg-amber-50 border border-amber-200 text-amber-800";
             } else {
                 computedComplexity = "GREEN";
-                badge.innerText = "GROEN (Minder Complex)";
+                badge.innerText = "GROEN (Licht Complex)";
                 badge.className = "px-3.5 py-1.5 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 border border-emerald-200 shadow-sm";
+                systemText.innerText = "🟢 Zorgkundige (ADL) of Basisverpleegkundige (autonoom)";
+                systemText.className = "p-2.5 rounded-lg font-bold bg-emerald-50 border border-emerald-200 text-emerald-800";
             }
 
-            // Sync dropdown if "Berekende status volgen" is selected
-            if (document.getElementById('overruledComplexity').value === "CALCULATED") {
-                document.getElementById('overruleReasonContainer').classList.add('hidden');
-            }
+            // Sync overrule check
+            handleComplexityOverrule();
         }
 
         // Recalculeer de berekende complexiteit wanneer de VVAZ een Huber-as aanvinkt
         function recalculateCalculatedComplexity() {
             calculateComplexity();
-            handleComplexityOverrule(); // Update overrule states
         }
 
         // Afhandelen van de handmatige complexiteits overrule door de VVAZ
@@ -901,8 +1009,23 @@
             const selectVal = document.getElementById('overruledComplexity').value;
             const container = document.getElementById('overruleReasonContainer');
             const textReason = document.getElementById('overruleReason');
+            const planStatus = document.getElementById('plan-status');
 
-            if (selectVal !== "CALCULATED" && selectVal !== computedComplexity) {
+            let mappedSelection = computedComplexity;
+            if (selectVal !== "CALCULATED") {
+                if (selectVal === "ZK" || selectVal === "BV") mappedSelection = (selectVal === "ZK" ? "GREEN (Toewijzing: Zorgkundige)" : "ORANGE (Toewijzing: Basisverpleegkundige)");
+                if (selectVal === "APCOACH") mappedSelection = "RED (Toewijzing: APcoach)";
+            } else {
+                mappedSelection = computedComplexity === "RED" ? "RED (APcoach)" : (computedComplexity === "ORANGE" ? "ORANGE (Basisverpleegkundige)" : "GREEN (Zorgkundige / BV)");
+            }
+            planStatus.innerText = mappedSelection;
+
+            // Trigger overrule motivatiebox indien nodig
+            const isOverruled = (selectVal === "ZK" && computedComplexity !== "GREEN") || 
+                               (selectVal === "BV" && computedComplexity !== "ORANGE") || 
+                               (selectVal === "APCOACH" && computedComplexity !== "RED");
+
+            if (selectVal !== "CALCULATED" && isOverruled) {
                 container.classList.remove('hidden');
                 textReason.required = true;
             } else {
@@ -916,90 +1039,112 @@
             const container = document.getElementById('dynamic-fiches-container');
             container.innerHTML = '';
             
-            let pesLines = [];
+            updatePesOutput();
+        }
 
+        // Update de PES diagnoses en zorgt dat alle klinische keuzes direct doorstromen
+        function updatePesOutput() {
+            let pesLines = [];
+            const container = document.getElementById('dynamic-fiches-container');
+            
+            // Loop door de actieve fiches om de HTML te renderen en de PES op te bouwen
             for (let i = 1; i <= 8; i++) {
                 const isActive = (answers[i] === 'ja' || answers[i] === 'onzeker');
                 if (isActive && clinicalFichesData[i]) {
                     const data = clinicalFichesData[i];
                     
-                    // Voeg toe aan de PES-output
-                    pesLines.push(`P: Verstoord functioneren op vlak van ${data.title.replace('Fiche ', '')}\nE: Gerelateerd aan: ${data.causes}\nS: Geopenbaard in: ${data.observations}\n`);
-
-                    // Render de fiche met checkboxes en invoervelden
-                    const div = document.createElement('div');
-                    div.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4";
-                    
-                    // Genereer HTML voor de specifieke indicatoren
-                    let indicatorsHtml = "";
+                    // Controleer de actieve indicators op de fiche
+                    let checkedIndicators = [];
                     data.indicators.forEach((ind, index) => {
-                        indicatorsHtml += `
-                            <label class="flex items-center space-x-2 py-1 cursor-pointer">
-                                <input type="checkbox" checked onchange="calculateComplexity()" class="text-[#113B6B] rounded border-slate-300 focus:ring-[#113B6B]">
-                                <span class="text-xs text-slate-700">${ind}</span>
-                            </label>
-                        `;
+                        checkedIndicators.push(ind);
                     });
 
-                    div.innerHTML = `
-                        <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-                            <h4 class="text-sm font-bold text-[#113B6B] flex items-center">
-                                <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg text-xs mr-2 font-bold">Fiche</span> ${data.title}
-                            </h4>
-                            <span class="text-xs text-emerald-700 font-bold bg-emerald-50 px-2.5 py-1 rounded-md">✓ Actief getriggerd</span>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
-                            <!-- Linkerzijde: Observaties en Checklists -->
-                            <div class="space-y-3">
-                                <div>
-                                    <span class="font-extrabold text-slate-500 uppercase tracking-wider block mb-1">1. Aan te stippen klinische indicatoren</span>
-                                    <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
-                                        ${indicatorsHtml}
+                    // PES-format genereren
+                    pesLines.push(`P: Verstoord functioneren op vlak van ${data.title.replace('Fiche ', '')}\nE: Gerelateerd aan: ${data.causes}\nS: Geopenbaard in: ${data.observations} (Geselecteerde risico's: ${checkedIndicators.join(', ')})\nInterventie (I): ${data.interventions}`);
+                    
+                    // Enkel opbouwen als de container leeg is (initiële render)
+                    if (container.children.length < Object.keys(answers).filter(k => answers[k] === 'ja' || answers[k] === 'onzeker').length) {
+                        const div = document.createElement('div');
+                        div.className = "bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-4";
+                        
+                        let indicatorsHtml = "";
+                        data.indicators.forEach((ind, index) => {
+                            indicatorsHtml += `
+                                <label class="flex items-center space-x-2 py-1 cursor-pointer">
+                                    <input type="checkbox" checked onchange="updatePesOutput()" class="indicator-chk text-[#113B6B] rounded border-slate-300 focus:ring-[#113B6B]">
+                                    <span class="text-xs text-slate-700">${ind}</span>
+                                </label>
+                            `;
+                        });
+
+                        div.innerHTML = `
+                            <div class="flex justify-between items-center border-b border-slate-100 pb-2">
+                                <h4 class="text-sm font-bold text-[#113B6B] flex items-center">
+                                    <span class="bg-[#FEF5EC] text-[#E67E22] p-1.5 rounded-lg text-xs mr-2 font-bold">Fiche</span> ${data.title}
+                                </h4>
+                                <span class="text-xs text-emerald-700 font-bold bg-emerald-50 px-2.5 py-1 rounded-md">✓ Automatisch getriggerd</span>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                                <div class="space-y-3">
+                                    <div>
+                                        <span class="font-extrabold text-slate-500 uppercase tracking-wider block mb-1">1. Klinische Indicatoren (Aanvinken om door te sturen naar Zorgplan)</span>
+                                        <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-1">
+                                            ${indicatorsHtml}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="font-extrabold text-slate-500 uppercase tracking-wider block mb-1">2. Mogelijke Observaties & Alarmsignalen (S)</span>
+                                        <textarea rows="2" oninput="updatePesText(${i}, 'observations', this.value)" class="w-full bg-white border border-slate-200 rounded-lg p-2 text-slate-700 font-semibold focus:ring-1 focus:ring-[#113B6B] outline-none">${data.observations}</textarea>
                                     </div>
                                 </div>
-                                <div>
-                                    <span class="font-extrabold text-slate-500 uppercase tracking-wider block mb-1">2. Mogelijke Observaties & Alarmsignalen (S)</span>
-                                    <textarea rows="2" class="w-full bg-white border border-slate-200 rounded-lg p-2 text-slate-700 font-semibold focus:ring-1 focus:ring-[#113B6B] outline-none">${data.observations}</textarea>
+                                <div class="space-y-3">
+                                    <div>
+                                        <span class="font-extrabold text-slate-500 uppercase tracking-wider block mb-1">3. Klinische Oorzaken (E)</span>
+                                        <input type="text" value="${data.causes}" oninput="updatePesText(${i}, 'causes', this.value)" class="w-full bg-white border border-slate-200 rounded-lg p-2 text-slate-700 focus:ring-1 focus:ring-[#113B6B] outline-none">
+                                    </div>
+                                    <div>
+                                        <span class="font-extrabold text-[#E67E22] uppercase tracking-wider block mb-1">4. Verpleegkundige Interventies (I) (SVH-Stap 4)</span>
+                                        <textarea rows="4" oninput="updatePesText(${i}, 'interventions', this.value)" class="w-full bg-white border border-amber-200 rounded-lg p-2 text-[#113B6B] font-semibold leading-relaxed focus:ring-1 focus:ring-[#113B6B] outline-none">${data.interventions}</textarea>
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <!-- Rechterzijde: Oorzaken en Interventies -->
-                            <div class="space-y-3">
-                                <div>
-                                    <span class="font-extrabold text-slate-500 uppercase tracking-wider block mb-1">3. Klinische Oorzaken (E)</span>
-                                    <input type="text" value="${data.causes}" class="w-full bg-white border border-slate-200 rounded-lg p-2 text-slate-700 focus:ring-1 focus:ring-[#113B6B] outline-none">
-                                </div>
-                                <div>
-                                    <span class="font-extrabold text-[#E67E22] uppercase tracking-wider block mb-1">4. Verpleegkundige Interventies (Stap 4 SVH)</span>
-                                    <textarea rows="4" class="w-full bg-white border border-amber-200 rounded-lg p-2 text-[#113B6B] font-semibold leading-relaxed focus:ring-1 focus:ring-[#113B6B] outline-none">${data.interventions}</textarea>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    container.appendChild(div);
+                        `;
+                        container.appendChild(div);
+                    }
                 }
             }
 
-            // Update PES text-area
+            // Sync direct naar Zone A in het Zorgplan
             document.getElementById('pes-output').value = pesLines.join('\n----------------------------------------\n\n');
         }
 
-        // Het aftekenen van het zorgplan met controle op de overrule-motivatie
+        // Live tekst synchroniseren binnen de PES diagnoses
+        function updatePesText(ficheNum, field, value) {
+            clinicalFichesData[ficheNum][field] = value;
+            updatePesOutput();
+        }
+
+        // Het bekrachtigen van het zorgplan en doorsturen naar de ReCo
         function signZorgplan() {
             const name = document.getElementById('vvaz-name').value;
             const selectVal = document.getElementById('overruledComplexity').value;
             const reason = document.getElementById('overruleReason').value;
 
-            if (selectVal !== "CALCULATED" && selectVal !== computedComplexity && reason.trim() === "") {
-                alert("🚨 COMPLIANCE FOUT:\n\nU heeft de berekende complexiteit handmatig overruled. Het is wettelijk verplicht om hiervoor een klinische motivatie in te vullen alvorens u kunt valideren!");
+            // RIZIV-Compliance controle op de overrule
+            const isOverruled = (selectVal === "ZK" && computedComplexity !== "GREEN") || 
+                               (selectVal === "BV" && computedComplexity !== "ORANGE") || 
+                               (selectVal === "APCOACH" && computedComplexity !== "RED");
+
+            if (selectVal !== "CALCULATED" && isOverruled && reason.trim() === "") {
+                alert("🚨 COMPLIANCE FOUT:\n\nU heeft het automatische toewijzingsvoorstel handmatig overruled. Het is wettelijk verplicht om hiervoor een klinische motivatie in te vullen alvorens u kunt valideren!");
                 document.getElementById('overruleReason').focus();
                 return;
             }
 
-            alert(`✓ Het zorgplan voor ${name} is succesvol digitaal bekrachtigd door de coördinerende VVAZ (Niveau 6).\n\nAlle gegevens stromen nu door naar de Care-Ace database en de pre-facturatiecontrole is actief.`);
+            alert(`✓ Zorgplan voor ${name} is succesvol digitaal bekrachtigd door de verantwoordelijke APcoach Sophie Peeters.\n\nAlle geselecteerde Gordon-patronen en klinische fiches zijn succesvol opgeslagen in de Care-Ace database.\n\nOverdracht voltooid: De Regiocoördinator (ReCo) kan nu de feitelijke ritten en wekelijkse planning opmaken.`);
         }
 
-        // Initiële trigger van de live-mapping
+        // Initiële trigger
         updateLiveMappings();
     </script>
 </body>
